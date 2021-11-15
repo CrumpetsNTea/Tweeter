@@ -6,7 +6,7 @@ Full width of the viewport
 1.5ems of space on the right and left between the content and the edges */
 
 nav {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 120px;
   /* Project Requirements */
@@ -36,3 +36,5 @@ nav {
       padding: 0.1em; 
       margin: -8px;
     }
+
+  
