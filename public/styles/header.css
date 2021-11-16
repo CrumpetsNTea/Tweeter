@@ -3,10 +3,13 @@ The avatar should be centered vertically and horizontally (Hint: the justify-con
 The name should be centered below the avatar
 The background-color should be a different colour than the nav and the body */
 
-header {
+#entire-header-area {
+  padding-top: 7.5rem;
+}
+
+#profile-area {
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   display: flex;
-  position: relative;
   height: 400px;
   width: 100%;
   background-color: orange;  
@@ -14,3 +17,4 @@ header {
   align-items: center;
   flex-direction: column;
 }
+
