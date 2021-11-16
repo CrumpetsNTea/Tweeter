@@ -16,7 +16,6 @@ html {
 
 body {
   color: #545149;
-  background-color: #FF0000;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 justify-content: center;
@@ -26,11 +25,11 @@ justify-content: center;
  */
 
   body main {
-    display: flex;
     margin: auto;
-    justify-content: center;
   }
  .container {
-  align-items: center;
   width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
  }
