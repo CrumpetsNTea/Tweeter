@@ -44,7 +44,7 @@ $(document).ready(function() {
     let values = $(this).serialize();
     if (values.length > 140) {
       alert(`Too many characters you silly goose - trim it down and try again.`);
-      // return;
+      return;
     }
     $.ajax({
       method: 'POST',
