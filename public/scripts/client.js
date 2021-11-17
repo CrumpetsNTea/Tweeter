@@ -39,22 +39,26 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const postTweet = function() {
-  //Posts a tweet to /tweets and loads it on the page
-    $("#submitTweet").submit(function(event) {
-      event.preventDefault();
-      let values = $(this).serialize();
-      $.ajax({
-        method: 'POST',
-        url: '/tweets',
-        data: values,
-        success: () => {
-          console.log(values);
-
-        }
-      });
+  $("#submitTweet").submit(function(event) {
+    event.preventDefault();
+    let values = $(this).serialize();
+    if (values.length > 140) {
+      alert(`Too many characters you silly goose - trim it down and try again.`);
+      // return;
+    }
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: values,
+      success: () => {
+        loadNewTweet();
+      },
+      error: () => {
+        alert("You can't post an empty tweet you silly goose");
+      }
     });
-  };
+  });
+  
 
 
   const loadNewTweet = function() {
