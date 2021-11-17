@@ -9,14 +9,14 @@
 
 $(document).ready(function() {
   const renderTweets = function(tweets) {
-    tweets = tweets.reverse();
+    tweets = tweets.reverse(); //renders from newest to oldest
     for (const tweet of tweets) {
-      $('.posted-tweets').append(createTweetElement(tweet));
+      $('.posted-tweets').append(createTweetElement(tweet)); //append the tweet to our posted tweets area
     }
   };
 
   const createTweetElement = tweet => {
-    let $tweet = $("<article>").addClass('tweet');
+    let $tweet = $("<article>").addClass('tweet'); //sets $tweet equal to a new article with the class of tweet
     let html = `
   <header class="username-area">
   <div class="name-and-pic">
@@ -35,7 +35,7 @@ $(document).ready(function() {
   </div>
   </footer>
 `;
-    $tweet.append(html);
+    $tweet.append(html); //appends our html here to the article we declared
     return $tweet;
   };
 
