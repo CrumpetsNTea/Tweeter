@@ -9,11 +9,22 @@
 
 .tweet {
   border: 4px solid #545149;
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .tweet:hover {
   box-shadow: 5px 10px grey;
+}
+
+.name-and-pic {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.name{
+padding-left: 1rem;
 }
 
 .username-area {
@@ -30,28 +41,26 @@ margin-top: 2rem;
 }
 
 .content {
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
 
 }
 .date {
   display: flex;
   align-self: flex-start;
-  padding-right: 36rem;
 }
-
-.icons {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  padding-left: 1rem;
-}
-
 
 .date-and-time-icons {
   font-size: medium;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: auto;
   width: 48rem;
   border-top: 4px solid #545149;
+  padding-left: 0.5rem;
 }
 
 #heart {

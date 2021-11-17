@@ -33,14 +33,14 @@ main h2 {
   border-bottom: 4px solid #545149;
 }
 
-#submit-button {
+.submit-button {
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
   color: white;
-margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
-#counter {
+.counter {
   display: flex;
 float: right;  
 margin-top: 0.7em;
