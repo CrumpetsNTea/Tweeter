@@ -4,10 +4,15 @@
   margin: auto;
   justify-content: center;
   align-content: center;
-  border: 4px solid #545149;
+  flex-direction: column;
 }
 
-.posted-tweets:hover {
+.tweet {
+  border: 4px solid #545149;
+margin-top: 2rem;
+}
+
+.tweet:hover {
   box-shadow: 5px 10px grey;
 }
 
@@ -16,11 +21,12 @@
   flex-direction: row;
   justify-content: space-between;
   padding-top: 0.5rem;
-
+  padding-left: 1rem;
 }
 
 .username {
   opacity: 0.5;
+  padding-right: 1rem;
 }
 
 .content {
