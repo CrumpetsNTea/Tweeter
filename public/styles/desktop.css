@@ -1,0 +1,71 @@
+@media only screen and (min-width: 1164px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    padding-left: 1.9rem;
+    padding-bottom: 0.5rem;
+  }
+
+
+  #entire-header-area{
+  width: 25%;
+  display: flex;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: flex-start;
+  float: left;
+
+}
+.entire-tweet-area {
+  float: right;
+  padding-right: 2%;
+  margin-top: 15rem;
+}
+
+.boxcontainer {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 15rem;
+}
+
+#profile-area {
+  height: 400px;
+  width: 130%;
+  margin-top: 10rem;
+}
+
+.posted-tweets {
+  width: 41rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.date-and-time-icons {
+
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  width: 39rem;
+  border-top: 4px solid #545149;
+  padding-left: 0.5rem;
+
+
+}
+
+}

@@ -4,14 +4,15 @@ The name should be centered below the avatar
 The background-color should be a different colour than the nav and the body */
 
 #entire-header-area {
+  width: 100%;
   padding-top: 7.5rem;
 }
 
 #profile-area {
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+  width: 50%;
   display: flex;
-  height: 400px;
-  width: 100%;
+  height: 50%;
   background-color: orange;  
   justify-content: center;
   align-items: center;

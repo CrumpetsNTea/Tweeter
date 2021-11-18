@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    
     <!-- Bungee Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,41 +27,44 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/posted-tweets.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/mobile-and-tablet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/desktop.css" type="text/css"/>
+
 
    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
   </head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="fixed-nav-bar">
-      <h1>tweeter</h1>
+<body class="body">
+
+  <!-- Top nav bar (fixed) -->
+  <nav class="fixed-nav-bar">
+    <h1>tweeter</h1>
       <div id="writeTweet">
-        <p><strong>Write</strong> a new tweet</p>
+        <p><strong>Write</strong>a new tweet</p>
         <i id="arrow" class="fas fa-angle-double-down"></i>
       </div>
-    </nav>
+  </nav>
 
-    <div id="entire-header-area">
+  <div id="entire-header-area">
     <header id="profile-area">
       <div class="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
-      <div>
+        <div>
           <h2>Your Name</h2>
-      </div>
-  </header>
-</div>
+        </div>
+      </header>
+  </div>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+  <!-- Page-specific (main) content here -->
+  <div class="entire-tweet-area">
       <section class="new-tweet">
         <div id="too-many-characters" class="error-message">
           <i id="exclamation" class="fas fa-exclamation-triangle"></i>
@@ -66,20 +72,21 @@
         <div id="empty-submission" class="error-message"> 
           <i id="exclamation" class="fas fa-exclamation-triangle"></i>
             You can't post an empty tweet you silly goose</div>
-        <h2>Compose Tweet</h2>
-
+        <div class="compose">
+        <h2 class="compose-header">Compose Tweet</h2>
+        </div>
           <form id="submitTweet" action="/tweets" method="POST">
-          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
-          <div>
-            <input class="submit-button" type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </div>
-        </form>
+            <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+              <div>
+                <input class="submit-button" type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </div>
+          </form>
       </section>
-
-      <secion class="posted-tweets">
+        <section class="posted-tweets">
         
-      </secion>
-    </main>
+         </secion>
+  </div>
+    <!-- </div> -->
   </body>
 </html>

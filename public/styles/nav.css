@@ -21,26 +21,13 @@ Full width of the viewport
   align-self: center;
   align-content: center;
 }
-
-/* nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 120px; */
-  /* Project Requirements */
-  /* padding: 1.5em;
-  color: white;
-  background-color: #4056A1;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-  align-self: center;
-  align-content: center;
- } */
- 
+strong {
+  padding-right: 0.5rem;
+}
 main {
 margin-top: 30px;
+margin: 0;
+width: 100%
 }
 
   nav h1 {
