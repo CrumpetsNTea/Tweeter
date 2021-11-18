@@ -11,15 +11,22 @@ $(document).ready(function() {
   //CREATES NEW STRUCTURED TWEETS USING AN OBJECT
   const createTweetElement = tweet => {
     let $tweet = $("<article>").addClass('tweet'); //sets $tweet equal to a new article with the class of tweet
+    
+    //TEXT VALIDATION FUNCTION USED BELOW TO PREVENT XSS - CHANGES THINGS INTO HARMLESS TEXT
+    const escape = function(str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
     let html = `
   <header class="username-area">
   <div class="name-and-pic">
   <img src="${tweet.user.avatars}">
-    <p class="name">${tweet.user.name}</p>
+    <p class="name">${escape(tweet.user.name)}</p>
     </div>
-    <p class="username">${tweet.user.handle}</p> 
+    <p class="username">${escape(tweet.user.handle)}</p> 
   </header>
-  <p class="content">${tweet.content.text}</p>
+  <p class="content">${escape(tweet.content.text)}</p>
   <footer class="date-and-time-icons">
     <p class= "date">${timeago.format(tweet.created_at)};</p>
     <div class="icons">
