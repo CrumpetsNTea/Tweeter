@@ -6,9 +6,12 @@ $(document).ready(function() {
     // console.log(counter);
     if ($numberOfChars > 140) {
       $counter.css("color", "red");
+      document.getElementById("too-many-characters").style.display = "block";
     }
     if ($numberOfChars < 140) {
       $counter.css("color", "#545149");
+      document.getElementById("too-many-characters").style.display = "none";
+
     }
   });
 

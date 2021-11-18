@@ -8,6 +8,17 @@
   padding-bottom: 2rem;
 }
 
+#exclamation {
+  color: red;
+}
+
+.error-message {
+  justify-content: center;
+  padding: 1rem;
+  color: #D8000C;
+	background-color: #FFBABA;
+}
+
 /* header */
 main h2 {
 

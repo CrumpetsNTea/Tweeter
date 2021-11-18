@@ -7,6 +7,8 @@
  */
 
 $(document).ready(function() {
+  document.getElementById("too-many-characters").style.display = "none";
+  document.getElementById("empty-submission").style.display = "none";
   
   //CREATES NEW STRUCTURED TWEETS USING AN OBJECT
   const createTweetElement = tweet => {
@@ -45,21 +47,26 @@ $(document).ready(function() {
     event.preventDefault();
     let values = $(this).serialize();
     if (values.length > 140) {
-      alert(`Too many characters you silly goose - trim it down and try again.`);
-      return;
+      document.getElementById("too-many-characters").style.display = "block";
+
+    } else {
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: values,
+        success: () => {
+          $('#tweet-text').val("");
+          loadNewestTweet();
+        },
+        error: () => {
+          document.getElementById("empty-submission").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("empty-submission").style.display = "none";
+          }, 4000);
+        }
+      });
     }
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: values,
-      success: () => {
-        $('#tweet-text').val("");
-        loadNewestTweet();
-      },
-      error: () => {
-        alert("You can't post an empty tweet you silly goose"); //if it throws a 400 error (which it does when you try to submit an empty tweet) then alerts the user
-      }
-    });
+    
   });
 
 
