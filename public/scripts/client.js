@@ -6,15 +6,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
-  const renderTweets = function(tweets) {
-    tweets = tweets.reverse(); //renders from newest to oldest
-    for (const tweet of tweets) {
-      $('.posted-tweets').append(createTweetElement(tweet)); //append the tweet to our posted tweets area
-    }
-  };
-
+  
+  //CREATES NEW STRUCTURED TWEETS USING AN OBJECT
   const createTweetElement = tweet => {
     let $tweet = $("<article>").addClass('tweet'); //sets $tweet equal to a new article with the class of tweet
     let html = `
@@ -27,7 +21,7 @@ $(document).ready(function() {
   </header>
   <p class="content">${tweet.content.text}</p>
   <footer class="date-and-time-icons">
-    <p class= "date">${timeago.format(new Date(tweet.created_at))};</p>
+    <p class= "date">${timeago.format(tweet.created_at)};</p>
     <div class="icons">
     <i id="flag" class="fas fa-flag"></i>
     <i id="retweet" class="fas fa-retweet"></i>
@@ -39,6 +33,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  //AJAX POST REQUEST FOR ADDING TWEETS
   $("#submitTweet").submit(function(event) {
     event.preventDefault();
     let values = $(this).serialize();
@@ -51,17 +46,19 @@ $(document).ready(function() {
       url: '/tweets',
       data: values,
       success: () => {
-        loadNewTweet();
+        $('#tweet-text').val("");
+        loadNewestTweet();
       },
       error: () => {
-        alert("You can't post an empty tweet you silly goose");
+        alert("You can't post an empty tweet you silly goose"); //if it throws a 400 error (which it does when you try to submit an empty tweet) then alerts the user
       }
     });
   });
+
+
   
-
-
-  const loadNewTweet = function() {
+  //INITIAL LOADING OF TWEETS
+  const loadTweets = function() {
     $.ajax({
       method: 'GET',
       url: '/tweets',
@@ -71,5 +68,31 @@ $(document).ready(function() {
 
     });
   };
-  loadNewTweet();
+  loadTweets();
+
+  //INITIAL RENDERING OF TWEETS PASSED IN FROM LOADTWEETS
+  const renderTweets = function(tweets) {
+    tweets = tweets.reverse(); //renders from newest to oldest
+    for (const tweet of tweets) {
+      $('.posted-tweets').append(createTweetElement(tweet)); //append the tweet to our posted tweets area
+    }
+  };
+
+  //MAKES A GET REQUEST FOR THE NEWEST TWEET WRITTEN AND PASSES IT ON
+  const loadNewestTweet = () => {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets',
+      success: (tweets) => {
+        let newTweet = tweets.slice(-1)[0];       //gets our newest tweet from the array of tweet objects
+        renderNewestTweet(newTweet);              //passes it on to the next function which will render it by prepending it to our tweet area
+      }
+    });
+  };
+
+  //RENDERS THE NEWEST TWEET ADDED FROM PASSED ON TWEET ABOVE
+  const renderNewestTweet = (tweet) => {
+    $('.posted-tweets').prepend(createTweetElement(tweet));     //prepend the new tweet because appending it causes it to be placed at the bottom of our tweet feed
+  };
+
 });
