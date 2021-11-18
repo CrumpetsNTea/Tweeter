@@ -13,6 +13,7 @@
 }
 
 .error-message {
+  display: none;
   justify-content: center;
   padding: 1rem;
   color: #D8000C;

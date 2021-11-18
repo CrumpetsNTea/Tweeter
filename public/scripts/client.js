@@ -7,8 +7,6 @@
  */
 
 $(document).ready(function() {
-  document.getElementById("too-many-characters").style.display = "none";
-  document.getElementById("empty-submission").style.display = "none";
   
   //CREATES NEW STRUCTURED TWEETS USING AN OBJECT
   const createTweetElement = tweet => {
@@ -44,11 +42,11 @@ $(document).ready(function() {
 
   //AJAX POST REQUEST FOR ADDING TWEETS
   $("#submitTweet").submit(function(event) {
+    $("#empty-submission").slideUp();
     event.preventDefault();
     let values = $(this).serialize();
     if (values.length > 140) {
-      document.getElementById("too-many-characters").style.display = "block";
-
+      $("#too-many-characters").slideDown();
     } else {
       $.ajax({
         method: 'POST',
@@ -59,10 +57,7 @@ $(document).ready(function() {
           loadNewestTweet();
         },
         error: () => {
-          document.getElementById("empty-submission").style.display = "block";
-          setTimeout(() => {
-            document.getElementById("empty-submission").style.display = "none";
-          }, 4000);
+          $("#empty-submission").slideDown();
         }
       });
     }

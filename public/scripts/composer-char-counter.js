@@ -6,18 +6,13 @@ $(document).ready(function() {
     // console.log(counter);
     if ($numberOfChars > 140) {
       $counter.css("color", "red");
-      document.getElementById("too-many-characters").style.display = "block";
+      $("#too-many-characters").slideDown();
     }
     if ($numberOfChars < 140) {
       $counter.css("color", "#545149");
-      document.getElementById("too-many-characters").style.display = "none";
+      $("#too-many-characters").slideUp();
 
     }
   });
 
 });
-
-// const $input = $("#new-channel-input")
-// $input.on("keypress", (event) => {
-//   console.log(event.target.value)
-// });
