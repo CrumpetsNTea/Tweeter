@@ -69,8 +69,6 @@ $(document).ready(function() {
     
   });
 
-
-  
   //INITIAL LOADING OF TWEETS
   const loadTweets = function() {
     $.ajax({
