@@ -58,6 +58,9 @@ $(document).ready(function() {
         },
         error: () => {
           $("#empty-submission").slideDown();
+          setTimeout(() => {
+            $("#empty-submission").slideUp();
+          }, 4000);
         }
       });
     }
