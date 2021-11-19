@@ -45,11 +45,19 @@ width: 100%
   }
 
     nav i {
-      margin: -8px;
+      margin: -15px;
     padding-bottom: 1rem;
-    padding-left: 10rem;
     align-self: center;
     color: #DE5039;
     font-size: large;
     justify-content: flex-end;
+    }
+
+    .compose-button {
+      width: 20%;
+      justify-content: flex-end;
+    }
+
+    #arrow:hover {
+      color: orange;
     }

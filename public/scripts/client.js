@@ -35,7 +35,7 @@ $(document).ready(function() {
     <i id="heart" class="fas fa-heart"></i>
   </div>
   </footer>
-`;
+  `;
     $tweet.append(html); //appends our html here to the article we declared
     return $tweet;
   };
