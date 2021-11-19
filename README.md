@@ -44,7 +44,7 @@ When a user mouses over any of the icons (the like button is moused over) - also
 !["Mouseover Like - and Twitter Hover"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/MouseoverLike.png?raw=true)
 
 Display on a Galaxy Fold:
-!["Display on a Galaxy Fold"] (https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/GalaxyFold.png?raw=true)
+!["Display on a Galaxy Fold"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/GalaxyFold.png?raw=true)
 
 Display on a Surface Duo:
 !["Display on a Surface Duo"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/SurfaceDuo.png?raw=true)
