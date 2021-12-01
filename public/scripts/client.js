@@ -42,10 +42,13 @@ $(document).ready(function() {
 
   //AJAX POST REQUEST FOR ADDING TWEETS
   $("#submitTweet").submit(function(event) {
+    const resetCounter = () => {
+      $(this).closest("form").find(".counter").text(140);
+    };
     $("#empty-submission").slideUp();
     event.preventDefault();
     let values = $(this).serialize();
-    if (values.length > 140) {
+    if (values.length > 145) {
       $("#too-many-characters").slideDown();
     } else {
       $.ajax({
@@ -54,6 +57,7 @@ $(document).ready(function() {
         data: values,
         success: () => {
           $('#tweet-text').val("");
+          resetCounter();
           loadNewestTweet();
         },
         error: () => {
@@ -99,6 +103,8 @@ $(document).ready(function() {
       }
     });
   };
+
+ 
 
   //RENDERS THE NEWEST TWEET ADDED FROM PASSED ON TWEET ABOVE
   const renderNewestTweet = (tweet) => {
