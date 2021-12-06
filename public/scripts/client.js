@@ -48,7 +48,8 @@ $(document).ready(function() {
     $("#empty-submission").slideUp();
     event.preventDefault();
     let values = $(this).serialize();
-    if (values.length > 145) {
+    let valuesLength = document.getElementById('tweet-text').value.length;
+    if (valuesLength > 145) {
       $("#too-many-characters").slideDown();
     } else {
       $.ajax({
