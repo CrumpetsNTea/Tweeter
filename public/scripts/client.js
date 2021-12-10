@@ -49,9 +49,10 @@ $(document).ready(function() {
     event.preventDefault();
     let values = $(this).serialize();
     let valuesLength = document.getElementById('tweet-text').value.length;
-    if (valuesLength > 145) {
+    console.log(valuesLength);
+    if (valuesLength > 140) {
       $("#too-many-characters").slideDown();
-    } else {
+    } else if (valuesLength <= 140) {
       $.ajax({
         method: 'POST',
         url: '/tweets',
