@@ -26,26 +26,26 @@ It has many interactive features - download it and give it a try!
 
 ## Screenshots
 
-### Mobile Responsive
+#### Mobile Responsive
 
 !["Mobile Responsive"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Mobile.png)
 
-### Desktop Responsive and writing a very important post!
+#### Desktop Responsive and writing a very important post!
 
 !["Desktop Responsive and writing a very important post!"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Counter.png)
 
-### My post is at 0 characters left, wow I really have a lot to say!
+#### My post is at 0 characters left, wow I really have a lot to say!
 
 !["At 0 Characters left"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/0CharsLeft.png)
 
-### But wait, I actually have a bit more I want to say... but now I am over the character limit
+#### But wait, I actually have a bit more I want to say... but now I am over the character limit
 
 !["Over Character Limit"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Goneover.png)
 
-### As expected, I can't post while over the character limit
+#### As expected, I can't post while over the character limit
 
 !["can't post when my post is over the character limit"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Can'tPost.png)
 
-### After deleting the extra characters, I was able to post my super important post, yay!
+#### After deleting the extra characters, I was able to post my super important post, yay!
 
 !["Posted"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Posted.png)
