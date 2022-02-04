@@ -17,24 +17,22 @@
   display: none;
   justify-content: center;
   padding: 1rem;
-  color: #D8000C;
-	background-color: #FFBABA;
+  color: #d8000c;
+  background-color: #ffbaba;
 }
 
 /* header */
 main h2 {
-
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  
 }
 
 /* form area */
 #submitTweet {
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 99%;
 }
 
 /* text area */
@@ -48,15 +46,15 @@ main h2 {
 
 .submit-button {
   font-family: "Bungee", sans-serif;
-  background-color: #4056A1;
+  background-color: #ec9a29;
   color: white;
   margin-top: 0.5em;
 }
 
 .counter {
   display: flex;
-float: right;  
-margin-top: 0.7em;
-font-family: "Bungee", sans-serif;
-color: #545149;
+  float: right;
+  margin-top: 0.7em;
+  font-family: "Bungee", sans-serif;
+  color: #545149;
 }

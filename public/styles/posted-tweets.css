@@ -5,6 +5,7 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 .tweet {
@@ -23,8 +24,8 @@
   padding-top: 1rem;
 }
 
-.name{
-padding-left: 1rem;
+.name {
+  padding-left: 1rem;
 }
 
 .username-area {
@@ -43,7 +44,7 @@ padding-left: 1rem;
 .content {
   padding-left: 1rem;
   padding-bottom: 0.5rem;
-
+  width: 98%;
 }
 .date {
   display: flex;
@@ -63,14 +64,12 @@ padding-left: 1rem;
   padding-left: 0.5rem;
 }
 
-
-
 #heart {
-margin: 5px;
+  margin: 5px;
 }
 
 #heart:hover {
-  color: orange
+  color: #ec9a29;
 }
 
 #flag {
@@ -78,7 +77,7 @@ margin: 5px;
 }
 
 #flag:hover {
-  color: orange
+  color: #ec9a29;
 }
 
 #retweet {
@@ -86,5 +85,5 @@ margin: 5px;
 }
 
 #retweet:hover {
-  color: orange
+  color: #ec9a29;
 }

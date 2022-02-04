@@ -6,7 +6,7 @@
   z-index: 9999;
   padding: 1.5em;
   color: white;
-  background-color: #4056A1;
+  background-color: #143642;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -18,39 +18,39 @@ strong {
   padding-right: 0.5rem;
 }
 main {
-margin-top: 30px;
-margin: 0;
-width: 100%
+  margin-top: 30px;
+  margin: 0;
+  width: 100%;
 }
 
-  nav h1 {
-    font-family: "Bungee", sans-serif;
-    font-size: 2rem; 
-    margin-bottom: 2rem;
-    align-content: center;
-    align-items: center;
-  }
-  nav div {
-    display: flex;
-    align-content: center;
-    flex-flow: column;
-    align-content: center;
-  }
+nav h1 {
+  font-family: "Bungee", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  align-content: center;
+  align-items: center;
+}
+nav div {
+  display: flex;
+  align-content: center;
+  flex-flow: column;
+  align-content: center;
+}
 
-    nav i {
-      margin: -15px;
-    padding-bottom: 1rem;
-    align-self: center;
-    color: #DE5039;
-    font-size: large;
-    justify-content: flex-end;
-    }
+nav i {
+  margin: -15px;
+  padding-bottom: 1rem;
+  align-self: center;
+  color: #de5039;
+  font-size: large;
+  justify-content: flex-end;
+}
 
-    .compose-button {
-      width: 20%;
-      justify-content: flex-end;
-    }
+.compose-button {
+  width: 20%;
+  justify-content: flex-end;
+}
 
-    #arrow:hover {
-      color: orange;
-    }
+#arrow:hover {
+  color: orange;
+}

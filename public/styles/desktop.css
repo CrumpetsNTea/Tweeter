@@ -1,5 +1,4 @@
-@media only screen and (min-width: 1164px) {
-
+@media only screen and (min-width: 1200px) {
   body {
     margin: 0;
     padding: 0;
@@ -9,64 +8,58 @@
     padding-bottom: 0.5rem;
   }
 
+  #entire-header-area {
+    width: 25%;
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+    float: left;
+  }
+  .entire-tweet-area {
+    float: right;
+    padding-right: 10%;
+    margin-top: 15.3rem;
+  }
 
-  #entire-header-area{
-  width: 25%;
-  display: flex;
-  height: 25%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: flex-start;
-  float: left;
+  .boxcontainer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 15rem;
+  }
 
-}
-.entire-tweet-area {
-  float: right;
-  padding-right: 2%;
-  margin-top: 15.3rem;
-}
+  #profile-area {
+    height: 400px;
+    width: 100%;
+    margin-top: 16rem;
+    margin-left: 8rem;
+  }
 
-.boxcontainer {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  align-content: flex-end;
-  justify-content: space-around;
-  flex-direction: row;
-  margin-top: 15rem;
-}
-
-#profile-area {
-  height: 400px;
-  width: 130%;
-  margin-top: 10rem;
-  margin-left: 8rem;
-}
-
-.posted-tweets {
-  width: 41rem;
+  .posted-tweets {
+    width: 41rem;
     display: flex;
     margin: auto;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-}
+  }
 
-.date-and-time-icons {
-
-  font-size: medium;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  margin: auto;
-  width: 39rem;
-  border-top: 4px solid #545149;
-  padding-left: 0.5rem;
-
-
-}
-
+  .date-and-time-icons {
+    font-size: medium;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    width: 39rem;
+    border-top: 4px solid #545149;
+    padding-left: 0.5rem;
+  }
 }
