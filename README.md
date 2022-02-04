@@ -25,3 +25,15 @@ It has many interactive features - download it and give it a try!
 - chance
 
 ## Screenshots
+
+!["Mobile Responsive"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Mobile.png)
+
+!["Desktop Responsive and writing a very important post!"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Counter.png)
+
+!["At 0 Characters left!"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/0CharsLeft.png)
+
+!["I Actually Have a Bit More I Want to Say, but now I'm Over Character Limit"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Goneover.png)
+
+!["I guess I can't post when my post is over the character limit"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Can'tPost.png)
+
+!["After deleting the extra characters I can now post - yay!"](https://github.com/CrumpetsNTea/Tweeter/blob/master/docs/Posted.png)
